@@ -9,24 +9,25 @@ This Tailwind CSS plugin adds a new variant called `lang-{language}` that can be
     ```bash
     # Using npm
     npm install -D @ganmahmud/tailwindcss-language-variant
-
+    ```
+    ```bash
     # Using Yarn
     yarn add -D @ganmahmud/tailwindcss-language-variant
     ```
-2. Add the plugin to your `tailwind.config.js` file. The default language is bn (Bangla). You can add as many language as you like using the `language` option in theme configuration.
+2. Add the plugin to your `tailwind.config.js` file. Add as many languages as you like using the `languages` option in theme configuration.
 
     ```js
     // tailwind.config.js
     module.exports = {
       theme: {
-        language: ['bn', 'en'],
+        languages: ['bn', 'en', 'hr'],
       },
       plugins: [
         require('@ganmahmud/tailwindcss-language-variant'),
       ],
     }
     ```
-3. The plugin assumes that you have a `lang` attribute in your HTML tag and it is handles by your application or website. You can then use the `lang-{language}` variant in your HTML like this:
+3. The plugin needs a `lang` attribute in your HTML tag to work. You can then use the `lang-{language}` variant in your HTML like this:
 
     ```html
     <html lang="bn">
